@@ -1,0 +1,21 @@
+[package]
+name = "rt_weekend"
+version = "0.1.0"
+authors = ["michey <aleksandr.mihailov@protonmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "ppm_example"
+path = "src/ppm_example/bin/main.rs"
+
+
+[[bin]]
+name = "tracer_example"
+path = "src/tracer_example/bin/main.rs"
+
+[lib]
+name="misc"
+path= "src/misc/lib.rs"
+
+[dependencies]
+rand="0.7.3"
