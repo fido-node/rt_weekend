@@ -25,7 +25,7 @@ fn main() {
     let vup = Point3::new(0.0, 1.0, 0.0);
     let vfov = 20.0;
     let apperture = 0.1;
-    let focus_dist = 10.0;
+    let focus_dist = 17.0;
 
     let camera = Camera::new(lookfrom, lookat, vup, vfov, aspect_ratio, apperture, focus_dist);
 
@@ -87,6 +87,7 @@ pub fn random_world() -> HittableList {
 
 
     world.add(Rc::new(Sphere::new_f(0.0, 1.0, 0.0, 1.0, dielectric.clone())));
+    world.add(Rc::new(Sphere::new_f(0.0, 1.0, 0.0, -0.7, dielectric.clone())));
 
     let material2 = Rc::new(Lambertian::rand());
     world.add(Rc::new(Sphere::new_f(-4.0, 1.0, 0.0, 1.0, material2)));
